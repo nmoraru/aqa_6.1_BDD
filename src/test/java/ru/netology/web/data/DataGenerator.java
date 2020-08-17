@@ -31,34 +31,4 @@ public class DataGenerator {
         return new VerificationInfo("123");
     }
 
-    public static TransactionInfo generateTransactionUnderBalanceAnotherCards() {
-        return new TransactionInfo("5000", "5559 0000 0000 0002");
-    }
-
-    public static TransactionInfo generateTransactionUnderBalanceAnotherCardsRollback() {
-        return new TransactionInfo("5000", "5559 0000 0000 0001");
-    }
-
-    public static TransactionInfo generateTransactionAllBalanceAnotherCards() {
-        return new TransactionInfo("10000", "5559 0000 0000 0002");
-    }
-
-    public static TransactionInfo generateTransactionAllBalanceAnotherCardsRollback() {
-        return new TransactionInfo("10000", "5559 0000 0000 0001");
-    }
-
-    public static TransactionInfo generateTransactionOverBalanceAnotherCards() {
-        return new TransactionInfo("20000", "5559 0000 0000 0002");
-    }
-
-    public static TransactionInfo generateTransactionWithCentAnotherCards() {
-        return new TransactionInfo("0,01", "5559 0000 0000 0001");
-    }
-
-    public static TransactionInfo generateTransactionWithCentAnotherCardsRollback() {
-        return new TransactionInfo("0,01", "5559 0000 0000 0001");
-    }
-
-
-
 }
