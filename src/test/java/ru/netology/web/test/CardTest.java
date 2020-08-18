@@ -28,16 +28,15 @@ public class CardTest {
         val loginPage = new LoginPage();
         val verificationPage = loginPage.validUser();
         val dashboardPage = verificationPage.validVerify();
+
+        val expectedFirstCardBalance = dashboardPage.getFirstCardBalance();
+        val expectedSecondCardBalance = dashboardPage.getSecondCardBalance();
+
         val transactionPage = dashboardPage.firstCardInfo();
 
-        val firstCardStartBalance = dashboardPage.getFirstCardBalance();
-        val secondCardStartBalance = dashboardPage.getSecondCardBalance();
         val amount = "5000";
-
         transactionPage.cancelTransaction("5559 0000 0000 0002", amount);
 
-        val expectedFirstCardBalance = firstCardStartBalance + Integer.parseInt(amount);
-        val expectedSecondCardBalance = secondCardStartBalance - Integer.parseInt(amount);
         val actualFirstCardBalance = dashboardPage.getFirstCardBalance();
         val actualSecondCardBalance = dashboardPage.getSecondCardBalance();
 
